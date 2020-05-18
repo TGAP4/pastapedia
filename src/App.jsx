@@ -1,9 +1,24 @@
 import React from 'react';
-import './App.css';
+import * as S from './App.styles';
+
+import Home from './pages/home/home';
+import BannerImage from './components/banner-image/banner-image';
+import NavBar from './components/nav-bar/nav-bar';
+import FridgeSidebar from './components/fridge-sidebar/fridge-sidebar';
+import FridgeBuilder from './pages/fridge-builder/fridge-builder';
+
 
 const App = () => {
   return (
-    <div>HI</div>
+    <S.App>
+      <BannerImage />
+      <FridgeSidebar />
+      <S.Pages>
+        <NavBar />
+        {/* <Home /> */}
+        <FridgeBuilder />
+      </S.Pages>
+    </S.App>
   );
 }
 
