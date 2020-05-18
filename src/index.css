@@ -7,7 +7,8 @@ body {
   font-family: 'Jost';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fff38be0
+  background-color: #fff38be0;
+  overflow: hidden;
 }
 
 code {

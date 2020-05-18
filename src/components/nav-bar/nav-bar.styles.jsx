@@ -10,6 +10,7 @@ export const NavButton = styled.div`
   cursor: pointer;
   font-weight: 500;
   font-family: BlinkMacSystemFont;
+  color: #222222;
 
   &:hover {
     color: #bbbbbb;

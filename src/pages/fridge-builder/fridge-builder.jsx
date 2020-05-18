@@ -9,12 +9,18 @@ import {addItem} from '../../redux/fridge/fridge.actions';
 
 
 const FridgeBuilder = ({fridgeItems, addItem}) => {
+  const displayedIngredients = IngredientsList.filter(ingredient => 
+    fridgeItems.indexOf(ingredient) === -1
+  ).sort();
+
   return (
     <>
       <S.Title>What Ingredients Do You Have Available?</S.Title>
       <S.IngredientsList>
-        {IngredientsList.map(ingredient => 
-          <S.IngredientIcon>{ingredient}</S.IngredientIcon>
+        {displayedIngredients.map(ingredient => 
+          <S.IngredientIcon onClick={() => addItem(ingredient)}>
+            {ingredient}
+          </S.IngredientIcon>
         )}
       </S.IngredientsList>
     </>

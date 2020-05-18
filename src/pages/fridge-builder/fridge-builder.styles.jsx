@@ -49,7 +49,7 @@ export const IngredientIcon = styled.div`
     width: 152px;
     height: 42px;
     margin: 7px;
-    border: 3px solid #1B49DA;
+    border: 3px solid #0029AC;
   }
 `;
 

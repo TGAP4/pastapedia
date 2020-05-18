@@ -4,16 +4,22 @@ import * as S from './fridge-sidebar.styles';
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect';
 import {selectFridgeItems} from '../../redux/fridge/fridge.selectors';
+import {deleteItem} from '../../redux/fridge/fridge.actions';
 
 
-const FridgeSidebar = ({fridgeItems}) => {
+const FridgeSidebar = ({fridgeItems, deleteItem}) => {
   return (
     <>
       <S.Sidebar>
-        <S.Title>My Fridge:</S.Title>
+        <S.Title>My Fridge</S.Title>
         <S.FridgeItems>
           {fridgeItems.map(item =>
-            <div>ITEM</div>
+            <S.FridgeItem item={item}>
+              {item}
+              <S.DeleteButton onClick={() => deleteItem(item)}>
+                &#10005;
+              </S.DeleteButton>
+            </S.FridgeItem>
           )}
         </S.FridgeItems>
       </S.Sidebar>
@@ -25,4 +31,8 @@ const mapState = createStructuredSelector({
   fridgeItems: selectFridgeItems
 });
 
-export default connect(mapState)(FridgeSidebar);
+const mapDispatch = dispatch => ({
+  deleteItem: item => dispatch(deleteItem(item))
+});
+
+export default connect(mapState, mapDispatch)(FridgeSidebar);

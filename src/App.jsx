@@ -13,8 +13,8 @@ const App = () => {
     <S.App>
       <BannerImage />
       <FridgeSidebar />
+      <NavBar />
       <S.Pages>
-        <NavBar />
         {/* <Home /> */}
         <FridgeBuilder />
       </S.Pages>
