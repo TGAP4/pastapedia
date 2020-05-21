@@ -16,6 +16,11 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 @font-face {
   font-family: 'Hoefler Text';
   src: url('./fonts/Hoefler\ Text\ Regular.ttf') format('truetype');

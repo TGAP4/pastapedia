@@ -14,16 +14,16 @@ const FridgeBuilder = ({fridgeItems, addItem}) => {
   ).sort();
 
   return (
-    <>
+    <S.FridgeBuilderPage>
       <S.Title>What Ingredients Do You Have Available?</S.Title>
       <S.IngredientsList>
-        {displayedIngredients.map(ingredient => 
-          <S.IngredientIcon onClick={() => addItem(ingredient)}>
+        {displayedIngredients.map((ingredient, i) => 
+          <S.IngredientIcon key={i} onClick={() => addItem(ingredient)}>
             {ingredient}
           </S.IngredientIcon>
         )}
       </S.IngredientsList>
-    </>
+    </S.FridgeBuilderPage>
   );
 }
 

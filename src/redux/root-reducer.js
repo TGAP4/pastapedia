@@ -3,16 +3,18 @@ import {persistReducer} from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
 import fridgeReducer from './fridge/fridge.reducer';
+import dishesReducer from './dishes/dishes.reducer';
 
 
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: []
+  whitelist: ['fridge']
 };
 
 const rootReducer = combineReducers({
-  fridge: fridgeReducer
+  fridge: fridgeReducer,
+  dishes: dishesReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

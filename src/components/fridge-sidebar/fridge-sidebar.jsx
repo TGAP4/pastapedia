@@ -13,8 +13,8 @@ const FridgeSidebar = ({fridgeItems, deleteItem}) => {
       <S.Sidebar>
         <S.Title>My Fridge</S.Title>
         <S.FridgeItems>
-          {fridgeItems.map(item =>
-            <S.FridgeItem item={item}>
+          {fridgeItems.map((item, i) =>
+            <S.FridgeItem key={i} item={item}>
               {item}
               <S.DeleteButton onClick={() => deleteItem(item)}>
                 &#10005;
