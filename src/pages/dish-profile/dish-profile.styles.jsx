@@ -33,10 +33,14 @@ export const DishInfo = styled.div`
   div {
     margin: 10px 0;
   }
+`;
 
-  span {
-    font-weight: 600;
-  }
+export const Label = styled.span`
+  font-weight: 600;
+`;
+
+export const MissingIngredients = styled.span`
+  color: red;
 `;
 
 export const Link = styled.a`

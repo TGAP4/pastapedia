@@ -6,23 +6,23 @@ import {createStructuredSelector} from 'reselect';
 import {selectIsFetchingDishes} from '../../redux/dishes/dishes.selectors';
 
 import DishPreviewCard from '../dish-preview-card/dish-preview-card';
+import LoadingSpinner from '../loading-spinner/loading-spinner';
 
 
 const AsyncDishList = ({dishList, displayImages, isFetchingDishes}) => {
-  console.log('asdf: ', dishList)
-  if (isFetchingDishes) return null;
-
   return (
-    <S.DishList>
-      {dishList.map((dish, i) =>
-        <DishPreviewCard 
-          key={i}
-          title={dish.title}
-          imageUrl={displayImages ? dish.imageUrl : null}
-          description={dish.description}
-        />
-      )}
-    </S.DishList>
+      isFetchingDishes ?
+      <LoadingSpinner /> :
+      <S.DishList>
+        {dishList.map((dish, i) =>
+          <DishPreviewCard 
+            key={i}
+            title={dish.title}
+            imageUrl={displayImages ? dish.imageUrl : null}
+            description={dish.description}
+          />
+        )}
+      </S.DishList>
   );
 }
 

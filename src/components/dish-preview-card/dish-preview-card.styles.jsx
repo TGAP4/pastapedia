@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const DishPreviewCard = styled.div`
   display: flex;
   width: 100%;
-  padding: 5px;
+  height: 110px;
+  padding: 5px 20px 5px 5px;
   margin: 10px 0;
   pointer-events: none;
 
@@ -14,7 +15,7 @@ export const DishPreviewCard = styled.div`
 
 export const Thumbnail = styled.img`
   width: 130px;
-  height: 100px;
+  height: auto;
   margin-right: 15px;
   cursor: pointer;
   pointer-events: auto;

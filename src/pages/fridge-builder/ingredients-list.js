@@ -14,8 +14,7 @@ const IngredientsList = [
   'Olives',
   'Capers',
   'Anchovies',
-  'Lemon Juice',
-  'Lemon Zest',
+  'Lemon',
   'Butter',
   'Basil',
   'Pine Nuts'

@@ -5,6 +5,11 @@ import {Link} from 'react-router-dom';
 
 
 const DishPreviewCard = ({title, imageUrl, description}) => {
+  const descriptionPreview = 
+    description.length >= 200 && window.innerWidth <= 850 ? 
+    description.substr(0, 197) + '...' : 
+    description;
+
   return (
     <S.DishPreviewCard 
       as={Link} 
@@ -13,7 +18,7 @@ const DishPreviewCard = ({title, imageUrl, description}) => {
       {imageUrl ? <S.Thumbnail src={imageUrl} alt='Dish Thumbnail' /> : null}
       <div>
         <S.Title>{title}</S.Title>
-        <S.Description>{description || 'DESCRIPTION'}</S.Description>
+        <S.Description>{descriptionPreview}</S.Description>
       </div>
     </S.DishPreviewCard>
   );

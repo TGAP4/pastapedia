@@ -39,7 +39,8 @@ export const List = styled.div`
 `;
 
 export const ListTitle = styled.div`
-  font-size: 20px;
+  font-size: 21px;
   text-align: center;
+  line-height: 1em;
   margin-bottom: 5px;
 `;
