@@ -4,7 +4,7 @@ export const Home = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 80px;
+  padding: 25px 80px;
 `;
 
 export const Welcome = styled.div`
@@ -40,7 +40,6 @@ export const NavButton = styled.div`
   cursor: pointer;
 
   &:hover {
-    font-weight: 600;
     border: 2px solid #0029AC;
     padding: 9px;
   }

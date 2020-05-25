@@ -2,13 +2,14 @@ import styled from 'styled-components';
 
 const getFontSize = ({children}) => {
   if (children.length <= 14) {
-    return `16px`;
+    return `15px`;
   } else {
     return `${236 / children.length}px`;
   }
 };
 
 export const FridgeBuilderPage = styled.div`
+  width: 100%;
   padding: 20px 80px;
 `;
 
@@ -24,7 +25,7 @@ export const IngredientsList = styled.div`
   align-items: center;
   justify-items: center;
   grid-gap: 2px 15px;
-  margin: 25px 0;
+  margin: 20px 0;
 `;
 
 export const IngredientIcon = styled.div`

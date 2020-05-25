@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
+const getImageUrl = ({imageUrl}) => {
+  return imageUrl ? '110px' : '';
+}
+
 export const DishPreviewCard = styled.div`
   display: flex;
   width: 100%;
-  height: 110px;
-  padding: 5px 20px 5px 5px;
-  margin: 10px 0;
+  height: ${getImageUrl};
+  padding-right: 20px;
+  margin-bottom: 17px;
   pointer-events: none;
 
   &:hover {
@@ -14,8 +18,9 @@ export const DishPreviewCard = styled.div`
 `;
 
 export const Thumbnail = styled.img`
-  width: 130px;
+  width: 150px;
   height: auto;
+  padding: 5px;
   margin-right: 15px;
   cursor: pointer;
   pointer-events: auto;

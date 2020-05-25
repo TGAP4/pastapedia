@@ -14,6 +14,7 @@ const DishPreviewCard = ({title, imageUrl, description}) => {
     <S.DishPreviewCard 
       as={Link} 
       to={`/dishes/${title.split(' ').join('').toLowerCase()}`}
+      imageUrl={imageUrl}
     >
       {imageUrl ? <S.Thumbnail src={imageUrl} alt='Dish Thumbnail' /> : null}
       <div>

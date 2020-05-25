@@ -13,7 +13,7 @@ export const Title = styled.div`
 `;
 
 export const Description = styled.div`
-  margin-top: 20px;
+  margin-top: 15px;
   font-size: 18px;
 `;
 
@@ -34,13 +34,14 @@ export const List = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 300px;
-  width: 35vw;
-  margin: 10px 14px;
+  width: 48%;
+  margin-top: 10px;
+  font-size: 15px;
 `;
 
 export const ListTitle = styled.div`
   font-size: 21px;
   text-align: center;
   line-height: 1em;
-  margin-bottom: 5px;
+  margin-bottom: 16px;
 `;

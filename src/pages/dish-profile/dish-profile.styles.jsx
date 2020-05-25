@@ -13,8 +13,7 @@ export const Title = styled.div`
 `;
 
 export const Description = styled.div`
-  // display: flex;
-  margin-top: 20px;
+  margin-top: 15px;
   font-size: 18px;
   width: 100%;
 `;

@@ -9,8 +9,8 @@ export const App = styled.div`
 
 export const Pages = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   min-width: 550px;
 `;
