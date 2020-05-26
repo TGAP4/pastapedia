@@ -9,7 +9,6 @@ export const App = styled.div`
 
 export const Pages = styled.div`
   display: flex;
-  justify-content: center;
   overflow-x: hidden;
   overflow-y: scroll;
   min-width: 550px;

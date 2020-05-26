@@ -10,7 +10,10 @@ function* fetchDishesAsync() {
     const dishesRef = yield call([firestore, 'collection'], 'pasta-dishes');
     const snapshot = yield call([dishesRef, 'get']);
     const dishesList = yield call([snapshot.docs, 'map'], doc => doc.data());
-    yield put(fetchDishesSuccess(dishesList));
+    const filteredList = yield dishesList.filter(dish => 
+      dish.title && dish.ingredients && dish.description
+    );
+    yield put(fetchDishesSuccess(filteredList));
   } catch (error) {
     yield put(fetchDishesFailure(error));
   }

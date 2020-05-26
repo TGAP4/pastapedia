@@ -8,8 +8,8 @@ export const DishPreviewCard = styled.div`
   display: flex;
   width: 100%;
   height: ${getImageUrl};
-  padding-right: 20px;
   margin-bottom: 17px;
+  padding-right: 10px;
   pointer-events: none;
 
   &:hover {

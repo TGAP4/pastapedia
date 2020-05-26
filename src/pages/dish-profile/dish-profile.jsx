@@ -1,12 +1,18 @@
 import React from 'react';
 import * as S from './dish-profile.styles';
 
+import {Redirect} from 'react-router-dom';
+
 import {connect} from 'react-redux';
 import {selectDish} from '../../redux/dishes/dishes.selectors';
 import {selectFridgeItems} from '../../redux/fridge/fridge.selectors';
 
 
 const DishProfile = ({dish, fridgeItems}) => {
+  if (!dish) return (
+    <Redirect to='/dishes' />
+  )
+
   const {title, pastaType, imageUrl, ingredients, recipe, wikiLink, description} = dish;
 
   const ownedIngredients = ingredients.filter(

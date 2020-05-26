@@ -34,8 +34,8 @@ export const List = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 300px;
-  width: 48%;
-  margin-top: 10px;
+  width: 47%;
+  margin: 10px 0;
   font-size: 15px;
 `;
 
